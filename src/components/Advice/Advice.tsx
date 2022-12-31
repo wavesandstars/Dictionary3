@@ -1,7 +1,8 @@
 import react from 'react'
 import { useState, useEffect } from 'react';
 import { Navbar } from '../../components/Navbar'
-import { makeStyles } from '@material-ui/core';
+import { Box, makeStyles, createTheme, ThemeProvider, Typography } from '@material-ui/core';
+
 
 const useStyles = makeStyles({
    
@@ -20,7 +21,8 @@ const useStyles = makeStyles({
         color: 'black',
         fontSize: '40px',
         margin: '150px',
-        paddingTop: '100px'
+        paddingTop: '100px',
+        fontFamily: ''
        
     },
     wrap: {
@@ -28,11 +30,28 @@ const useStyles = makeStyles({
         textAlign: 'center'  
 
     },
+    foot: {
+        textAlign: 'center',
+        fontSize: '15px'
+    }
    
 })
 
 
+
 export const Advice = () => {
+    const theme = createTheme
+    ({
+        typography: {
+          fontFamily: ["Kavoon, cursive"].join(","),
+          fontSize: 25,
+          
+         
+          
+         
+        },  });
+    
+    
     const classes = useStyles();
     const [advice, setAdvice] = useState("");
     useEffect(() => {
@@ -58,11 +77,20 @@ export const Advice = () => {
         <Navbar />
         <div className={`${classes.background}`}>
         <div className={`${classes.wrap}`} >
-        <p className={`${classes.para}`}>{advice}</p>
+        <Box m={25} pt={3}>
+        <ThemeProvider theme={theme}>
+        <Typography style={{color: 'lightblue'}} align="center"  > "{advice}"
+        </Typography>
+        </ThemeProvider>
+        </Box>
+
         <h5>  (Refresh the page to generate a new quote)</h5>
         </div>
+        <footer className={`${classes.foot}`}> Quotes generated from Advice Slip JSON API © Tom Kiss 2013 - 2022</footer>
         </div>
-    </div>;
+       
+    </div>
+   
     </>
 )};
 

@@ -10,12 +10,13 @@ import { Button, Dialog,
 import { WordForm } from '../ContactForm';
 
 
+//  make and set up my data table 
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 90, hide: true },
-    { field: 'savedword', headerName: 'Word', flex: 1 },
-    { field: 'meaning', headerName: 'Meaning', flex: 1 },
-    { field: 'speechtype', headerName: 'Part of Speech', flex: 1 },
+    { field: 'savedword', headerName: 'Word', flex: 0.5 },
+    { field: 'meaning', headerName: 'Meaning' , flex: 1.5 },
+    { field: 'speechtype', headerName: 'Part of Speech', flex: 0.5 },
   
 ];
 
@@ -48,6 +49,7 @@ export const DataTable = () => {
     }
 
     return (
+    
         <div style={{ height: 400, width: '100%' }}>
             <h2>My Words</h2>
 
@@ -75,5 +77,6 @@ export const DataTable = () => {
         </Dialog>
             
         </div>
+        
     )
 }
