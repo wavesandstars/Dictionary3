@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import { FirebaseAppProvider, AuthCheck } from 'reactfire';
-import { Home, Contact, About, Book } from './components'
+import { Home, Contact, About, Book, Advice} from './components'
 // import { firebaseConfig } from './firebaseConfig'
 // import 'firebase/auth';
 import { Provider } from 'react-redux';
 import { store } from './redux/store'
+
+
+
+
 
 const temp_props = "My Dictionary"
 
@@ -30,6 +34,12 @@ ReactDOM.render(
         <Route path='/about'>
           <About></About>
         </Route>
+        <Route path='/advice'>
+          <Advice></Advice>
+        </Route>
+        
+        
+        
 
 
       </Switch>

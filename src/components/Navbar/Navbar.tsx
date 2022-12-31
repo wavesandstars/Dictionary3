@@ -87,10 +87,15 @@ export const Navbar = () => {
                         <Button>
                             <Link to='About' className={`${classes.navbarItem} ${classes.psides}`}>About Us</Link>
                         </Button>
-                        <Button>
-                            <Link to='Finder' className={`${classes.navbarItem} ${classes.psides}`}>Search a word</Link>
-                        </Button>
+                        
                     </li>
+                    <li>
+                        <Button>
+                            <Link to='Advice' className={`${classes.navbarItem} ${classes.psides}`}>I need a quote</Link>
+                        </Button>
+                        
+                    </li>
+                    
                 </ul>
             </div>
         </div>

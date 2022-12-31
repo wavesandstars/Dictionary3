@@ -5,8 +5,8 @@ export const Contact = () => {
     return (
         <div>
             <Navbar />
-            Irrelevant generic content please don't actually call me
-						unless it's an emergency 
+            I'd love your feedback, but I'd love if you share my website even more! 
+            If you don't like it, just move on. Thanks! Aloha!
         </div>
     )
 }
