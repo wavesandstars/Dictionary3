@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
-// import Digits from '../../assets/images/digitlogo.png';
+import Digits from '../../assets/images/alessandro-bianchi-_kdTyfnUFAc-unsplash.jpg'
+import { GridLoadingOverlay } from '@material-ui/data-grid';
+// import { AuthCheck } from 'reactfire';
 
 const useStyles = makeStyles({
     logo: {
-        // content: `url(${Digits})`,
-        maxWidth: '20%',
+        content: `url(${Digits})`,
+        maxWidth: '15%',
         height: 'auto',
+        border: 0,
+        borderRadius: 7,
+        boxShadow: '0 3px 5px 2px rgba(275, 150, 200, .3)'
+
     },
     navlogo: {
         display: 'flex',
@@ -29,9 +35,9 @@ const useStyles = makeStyles({
         flexDirection: 'row',
     },
     navbar: {
-        backgroundColor: '#003155',
+        backgroundColor: '#4F1BAB',
         zIndex: 1,
-        borderBottom: '1px solid grey',
+        borderBottom: '2px solid green',
     },
     navbarItem: {
         color: 'white',
@@ -73,9 +79,19 @@ export const Navbar = () => {
             </div>
             <div className={`${classes.width60} ${classes.alignCenter}`}>
                 <ul className={`${classes.ul} ${classes.row} ${classes.spaceBetween} ${classes.psides}`}>
+                {/* <Suspense fallback = {'loading...'}> */}
+                        {/* <AuthCheck fallback ={ */}
+
+                        <li>
+                      
+                        <Link to='/SignIn' className={`${classes.navbarItem} ${classes.psides}`}>Sign In</Link>
+                        
+                    </li>
+                        {/* }> */}
+                    
                     <li>
                         <Button>
-                        <Link to='Book' className={`${classes.navbarItem} ${classes.psides}`}>My Dictionary</Link>
+                        <Link to='/Book' className={`${classes.navbarItem} ${classes.psides}`}>My Dictionary</Link>
                         </Button>
                     </li>
                     <li>
@@ -87,15 +103,16 @@ export const Navbar = () => {
                         <Button>
                             <Link to='About' className={`${classes.navbarItem} ${classes.psides}`}>About Us</Link>
                         </Button>
-                        
+
                     </li>
                     <li>
                         <Button>
-                            <Link to='Advice' className={`${classes.navbarItem} ${classes.psides}`}>I need a quote</Link>
+                            <Link to='Advice' className={`${classes.navbarItem} ${classes.psides}`}>Need a Quote?</Link>
                         </Button>
-                        
+
                     </li>
-                    
+                    {/* </AuthCheck>
+                    </Suspense> */}
                 </ul>
             </div>
         </div>

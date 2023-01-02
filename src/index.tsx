@@ -7,7 +7,7 @@ import { Home, Contact, About, Book, Advice} from './components'
 // import 'firebase/auth';
 import { Provider } from 'react-redux';
 import { store } from './redux/store'
-
+import './styles.css'
 
 
 

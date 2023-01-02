@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         justifyContent: 'center',
         alignItems: 'center',
         fontFamily: "Georgia, 'Times New Roman', Times, serif",
+        
     },
     h3: {
         display: 'flex',
@@ -90,6 +91,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     root: {
       display: 'flex',
+      backgroundImage: `linear-gradient(rgba(0, 49, 85) 0%, rgba(121,147,163,1) 47%, rgba(249,249,249,1) 100%)`,
+      color: 'lightblue'
+
+      
     },
     column: {
         display: 'flex',
@@ -121,6 +126,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     drawerPaper: {
       width: drawerWidth,
+      backgroundColor: '#CDBDE9',
+      color: '#5854CE',
+      fontWeight: 'bold'
     },
     drawerHeader: {
       display: 'flex',
@@ -147,7 +155,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     toolbar:{
       display: 'flex',
-      backgroundColor: '#003155',
+      backgroundColor: '#4F1BAB',
       color: 'white',
       fontFamily: "Georgia, 'Times New Roman', Times, serif",
     },
@@ -208,11 +216,17 @@ export const Book = withRouter(( props:WordProps ) => {
         {
             text: 'Contact',
             onClick: () => history.push('/contact')
+            
+        },
+        {
+            text: 'Advice',
+            onClick: () => history.push('/advice')
+            
         },
     ]
 
     return (
-        <div className={`${classes.root} ${classes.column}`}>
+        <div className={`${classes.root} ${classes.column} `}>
             <CssBaseline /> {/* This is just a normal part of complex MUI; see docs */}
             <AppBar position="fixed" className={clsx(classes.appBar, {[classes.appBarShift]: open })}> {/* We are using MUI to make another navbar */}
                 <Toolbar className={classes.toolbar}>
