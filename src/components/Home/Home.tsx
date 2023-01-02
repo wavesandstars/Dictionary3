@@ -5,18 +5,21 @@ import { Navbar } from '../../components/Navbar'
 import { Link } from 'react-router-dom';
 
 
+
 interface Props {
     title: string;
 }
 
 const useStyles = makeStyles({
     background: {
-        background: 'radial-gradient(circle, rgba(238,174,202,1) 19%, rgba(148,187,233,1) 100%)',
+        // background: 'radial-gradient(circle, rgba(238,174,202,1) 19%, rgba(148,187,233,1) 100%)',
         width: '100%',
-        height: '90%',
+        height: '80%',
         backgroundPosition: 'center',
         position: 'absolute',
-      
+        backgroundImage: "url(" + "https://images.pexels.com/photos/1907785/pexels-photo-1907785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" + ")",
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
     },
     main_text: {
         textAlign: 'center',
@@ -26,7 +29,7 @@ const useStyles = makeStyles({
         transform: 'translate(-50%, -50%)',
         color: 'Black',
         fontSize: '27px',
-        textShadow: '1px 1px 2px #AD69E1, 0 0 1em blue, 0 0 0.2em blue',
+        textShadow: '1px 1px 2px #AD69E1, 0 0 1em lightblue, 0 0 0.2em white',
        
     },
     button_text: {
@@ -35,7 +38,7 @@ const useStyles = makeStyles({
         padding: '4px',
         fontWeight: 'bold',
         textDecoration: 'none',
-        border: 'solid white 1px',
+        border: 'solid black 0.5px',
         borderRadius: '30px',
         backgroundColor: '#AD69E1',
         boxShadow: '4px 5px #656565',
