@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import { FirebaseAppProvider, AuthCheck } from 'reactfire';
-import { Home, Contact, About, Book, Advice} from './components'
-// import { firebaseConfig } from './firebaseConfig'
-// import 'firebase/auth';
+import { FirebaseAppProvider, AuthCheck } from 'reactfire';
+import { Home, Contact, About, Book, Advice, SignIn} from './components'
+import { firebaseConfig } from './firebaseConfig'
+import 'firebase/auth';
 import { Provider } from 'react-redux';
 import { store } from './redux/store'
 import './styles.css'
@@ -16,7 +16,7 @@ const temp_props = "My Dictionary"
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <FirebaseAppProvider firebaseConfig={firebaseConfig} suspense={true}> */}
+    <FirebaseAppProvider firebaseConfig={firebaseConfig} suspense={true}>
     <Provider store={store}>
     <Router>
       <Switch>
@@ -37,6 +37,9 @@ ReactDOM.render(
         <Route path='/advice'>
           <Advice></Advice>
         </Route>
+        <Route path='/signin'>
+          <SignIn></SignIn>
+        </Route>
         
         
         
@@ -45,7 +48,7 @@ ReactDOM.render(
       </Switch>
     </Router>
     </Provider>
-    {/* </FirebaseAppProvider> */}
+    </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

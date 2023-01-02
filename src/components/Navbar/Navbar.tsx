@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Digits from '../../assets/images/alessandro-bianchi-_kdTyfnUFAc-unsplash.jpg'
 import { GridLoadingOverlay } from '@material-ui/data-grid';
-// import { AuthCheck } from 'reactfire';
+import { AuthCheck } from 'reactfire';
 
 const useStyles = makeStyles({
     logo: {
@@ -79,18 +79,18 @@ export const Navbar = () => {
             </div>
             <div className={`${classes.width60} ${classes.alignCenter}`}>
                 <ul className={`${classes.ul} ${classes.row} ${classes.spaceBetween} ${classes.psides}`}>
-                {/* <Suspense fallback = {'loading...'}> */}
-                        {/* <AuthCheck fallback ={ */}
+                <Suspense fallback = {'loading...'}>
+                        <AuthCheck fallback ={
 
                         <li>
                       
                         <Link to='/SignIn' className={`${classes.navbarItem} ${classes.psides}`}>Sign In</Link>
                         
                     </li>
-                        {/* }> */}
+                        }>
                     
                     <li>
-                        <Button>
+                    <Button>
                         <Link to='/Book' className={`${classes.navbarItem} ${classes.psides}`}>My Dictionary</Link>
                         </Button>
                     </li>
@@ -109,12 +109,18 @@ export const Navbar = () => {
                         <Button>
                             <Link to='Advice' className={`${classes.navbarItem} ${classes.psides}`}>Need a Quote?</Link>
                         </Button>
-
                     </li>
-                    {/* </AuthCheck>
-                    </Suspense> */}
+                    </AuthCheck>
+                    </Suspense>
                 </ul>
             </div>
         </div>
     )
 }
+
+
+
+
+
+
+
