@@ -5,6 +5,7 @@ export * from './Contact';
 export * from './About';
 export * from './Advice';
 export * from './SignIn';
+export * from './Searching';
 
 
 

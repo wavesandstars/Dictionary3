@@ -110,6 +110,12 @@ export const Navbar = () => {
                             <Link to='Advice' className={`${classes.navbarItem} ${classes.psides}`}>Need a Quote?</Link>
                         </Button>
                     </li>
+                    <li>
+                        <Button>
+                            <Link to='Searching' className={`${classes.navbarItem} ${classes.psides}`}>Word Search</Link>
+                        </Button>
+                    </li>
+                    
                     </AuthCheck>
                     </Suspense>
                 </ul>

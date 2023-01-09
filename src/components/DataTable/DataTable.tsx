@@ -10,7 +10,11 @@ import { Button, Dialog,
 import { WordForm } from '../ContactForm';
 
 
+
+
+
 //  make and set up my data table 
+
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 90, hide: true },
@@ -25,6 +29,7 @@ interface gridData {
         id?:string
     }
 }
+
 
 export const DataTable = () => {
 
@@ -52,13 +57,14 @@ export const DataTable = () => {
     
         <div style={{ height: 400, width: '100%' }}>
             <h2>My Words</h2>
-
-        <DataGrid rows={ wordData } columns={ columns } pageSize={ 5 } checkboxSelection={true} 
+       
+        <DataGrid  rows={ wordData } columns={ columns } pageSize={ 5 } checkboxSelection={true} 
         onSelectionModelChange={ (item) => {
             setSelectionModel(item)
 						
           }}
         />
+       
 
         <Button onClick={handleOpen}>Update</Button>
         <Button variant="contained" color="secondary" onClick={deleteData}>Delete</Button>

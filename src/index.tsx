@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { FirebaseAppProvider, AuthCheck } from 'reactfire';
-import { Home, Contact, About, Book, Advice, SignIn} from './components'
+import { Home, Contact, About, Book, Advice, SignIn, Searching} from './components'
 import { firebaseConfig } from './firebaseConfig'
 import 'firebase/auth';
 import { Provider } from 'react-redux';
@@ -39,6 +39,9 @@ ReactDOM.render(
         </Route>
         <Route path='/signin'>
           <SignIn></SignIn>
+        </Route>
+        <Route path='/searching'>
+          <Searching></Searching>
         </Route>
         
         

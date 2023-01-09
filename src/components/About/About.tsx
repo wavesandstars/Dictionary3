@@ -47,6 +47,7 @@ export const About = () => {
 Here's a way to practice creativity and maybe even improve you mental health.
             <br></br>Find words that having meaning to you and create your own dictionary!
             <br></br> If you are feeling stuck, use an automatically generated inspirational quote to help jump start your brain cells.
+            <br></br> The official definitions are also available to search in the word search tab. 
 
             <br></br>
 <img  className = {classes.tiles} src={scrabble} alt= 'scrabble'/>

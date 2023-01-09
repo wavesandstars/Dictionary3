@@ -1,6 +1,8 @@
 let token = '207a36411f239f9839a475ca00dac89a921df801bd554009'
 
 export const server_calls = {
+
+    
     get: async () => {
         const response = await fetch(`https://warp-sparkling-plastic.glitch.me/api/words`,{
             method: 'GET',
@@ -52,4 +54,5 @@ export const server_calls = {
             }
         })
     }
+    
 }

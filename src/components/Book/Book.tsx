@@ -223,6 +223,11 @@ export const Book = withRouter(( props:WordProps ) => {
             onClick: () => history.push('/advice')
             
         },
+        {
+            text: 'Word Search',
+            onClick: () => history.push('/searching')
+            
+        }
     ]
 
     return (
