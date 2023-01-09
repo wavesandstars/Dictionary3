@@ -30,6 +30,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import clsx from 'clsx';
 import { RouteComponentProps, withRouter, Switch, Route } from "react-router-dom";
 import { DataTable } from '../../components/DataTable';
+//should be DictionaryForm, but VScode wont accept it 
 import { WordForm } from '../ContactForm'
 
 interface WordProps{
