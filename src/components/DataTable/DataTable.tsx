@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { WordForm } from '../ContactForm';
-
-//should be DictionaryForm, but VScode wont accept it 
+import { WordForm } from '../DictionaryForm';
 import { DataGrid, GridColDef } from '@material-ui/data-grid';
 import { useGetData } from '../../custom-hooks';
 import { server_calls } from '../../api';

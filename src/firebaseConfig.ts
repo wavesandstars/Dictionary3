@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyAvTybIGFydN_OKGwTU7qB4CM2oRkU8p_I",
-  authDomain: "my-dictionary-project-2.firebaseapp.com",
-  projectId: "my-dictionary-project-2",
-  storageBucket: "my-dictionary-project-2.appspot.com",
-  messagingSenderId: "958888102757",
-  appId: "1:958888102757:web:e18f3cd1250d8b361b2f8c"
+  apiKey: "AIzaSyCQQ2Gk9NQYXQaszI_jDtl7ZI8p50ROG50",
+  authDomain: "dictionary3-afd17.firebaseapp.com",
+  projectId: "dictionary3-afd17",
+  storageBucket: "dictionary3-afd17.appspot.com",
+  messagingSenderId: "785981746049",
+  appId: "1:785981746049:web:1524fbf7f1598a86459680"
 };
